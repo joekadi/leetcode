@@ -1,2 +1,4 @@
 # Leetcode Practice
-<p>My solutions to leetcode problems</p>
+<p>
+A collection of my Leetcode problem solutions. My Leetcode account is: https://leetcode.com/joekadi/
+</p>
