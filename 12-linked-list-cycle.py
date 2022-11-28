@@ -1,5 +1,8 @@
 #https://leetcode.com/problems/linked-list-cycle/
 #Definition for singly-linked list.
+from typing import Optional
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -7,13 +10,12 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        
-        visited_vals = []
-    
-        while head:
-            if head in visited_vals:
+        fast, slow = head, head,
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
                 return True
-            else:
-                visited_vals.append(head)
-            head = head.next
-            
+
+        return False
